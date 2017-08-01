@@ -30,7 +30,7 @@
     </form>
 
     <ul>
-      <li ng-repeat='friend in friends | orderBy: sortDirection + sortProp' class='friend' >
+      <li ng-repeat='friend in friends | filter: searchTerm | orderBy: sortDirection + sortProp' class='friend' >
         <img class="profile-pic" ng-src={{friend.pic_square}}>
         <h3>{{friend.name}}</h3>
         <div ng-if="friend.location" class="location">
